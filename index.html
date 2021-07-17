@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: lavender;
+        }
+
+        table {
+            width: 100%;
+            border: 2px solid grey;
+            color: firebrick;
+        }
+
+        .heading {
+            color: black;
+        }
+
+        .states {
+            text-align: left;
+            padding-left: 8px;
+            width: 75vh;
+        }
+
+        th {
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .total {
+            font-weight: bolder;
+            font-size: 20px;
+            color: slateblue;
+        }
+
+        #totalConfirmed {
+            color: slateblue;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        #totalRecovered {
+            color: slateblue;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        #totalDeaths {
+            color: slateblue;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        h4 {
+            color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-3 mb-3">
+        <div>
+            <h4>COVID-19 Statewise Status</h4>
+        </div>
+        <table border="2">
+            <tr class=heading>
+                <th>S.no</th>
+                <th>State</th>
+                <th>Confirmed</th>
+                <th>Recovered</th>
+                <th>Deaths</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class=states>Andaman and Nicobar Islands</td>
+                <td id=andamanConfirmed></td>
+                <td id=andamanRecovered></td>
+                <td id=andamanDeaths></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class=states>Andhra Pradesh</td>
+                <td id=andhraConfirmed></td>
+                <td id=andhraRecovered></td>
+                <td id=andhraDeaths></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class=states>Arunachal Pradesh</td>
+                <td id=arunachalConfirmed></td>
+                <td id=arunachalRecovered></td>
+                <td id=arunachalDeaths></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class=states>Assam</td>
+                <td id=assamConfirmed></td>
+                <td id=assamRecovered></td>
+                <td id=assamDeaths></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td class=states>Bihar</td>
+                <td id=biharConfirmed></td>
+                <td id=biharRecovered></td>
+                <td id=biharDeaths></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td class=states>Chandigarh</td>
+                <td id=chandigarhConfirmed></td>
+                <td id=chandigarhRecovered></td>
+                <td id=chandigarhDeaths></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td class=states>Chhattisgarh</td>
+                <td id=chhattisgarhConfirmed></td>
+                <td id=chhattisgarhRecovered></td>
+                <td id=chhattisgarhDeaths></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td class=states>Dadra and Nagar Haveli and Daman and Diu</td>
+                <td id=dadraConfirmed></td>
+                <td id=dadraRecovered></td>
+                <td id=dadraDeaths></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td class=states>Delhi</td>
+                <td id=delhiConfirmed></td>
+                <td id=delhiRecovered></td>
+                <td id=delhiDeaths></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td class=states>Goa</td>
+                <td id=goaConfirmed></td>
+                <td id=goaRecovered></td>
+                <td id=goaDeaths></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td class=states>Gujarat</td>
+                <td id=gujaratConfirmed></td>
+                <td id=gujaratRecovered></td>
+                <td id=gujaratDeaths></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td class=states>Haryana</td>
+                <td id=haryanaConfirmed></td>
+                <td id=haryanaRecovered></td>
+                <td id=haryanaDeaths></td>
+            </tr>
+
+            <tr>
+                <td>13</td>
+                <td class=states>Hiamchal Pradesh</td>
+                <td id=himachalConfirmed></td>
+                <td id=himachalRecovered></td>
+                <td id=himachalDeaths></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td class=states>Jammu and Kashmir</td>
+                <td id=jammuConfirmed></td>
+                <td id=jammuRecovered></td>
+                <td id=jammuDeaths></td>
+            </tr>
+
+            <tr>
+                <td>15</td>
+                <td class=states>Jharkhand</td>
+                <td id=jharkhandConfirmed></td>
+                <td id=jharkhandRecovered></td>
+                <td id=jharkhandDeaths></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td class=states>Karnataka</td>
+                <td id=karnatakaConfirmed></td>
+                <td id=karnatakaRecovered></td>
+                <td id=karnatakaDeaths></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td class=states>Kerala</td>
+                <td id=keralaConfirmed></td>
+                <td id=keralaRecovered></td>
+                <td id=keralaDeaths></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td class=states>Ladakh</td>
+                <td id=ladakhConfirmed></td>
+                <td id=ladakhRecovered></td>
+                <td id=ladakhDeaths></td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td class=states>Lakshadweep</td>
+                <td id=lakshadweepConfirmed></td>
+                <td id=lakshadweepRecovered></td>
+                <td id=lakshadweepDeaths></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td class=states>Madhya Pradesh</td>
+                <td id=madhyaConfirmed></td>
+                <td id=madhyaRecovered></td>
+                <td id=madhyaDeaths></td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td class=states>Maharashtra</td>
+                <td id=maharashtraConfirmed></td>
+                <td id=maharashtraRecovered></td>
+                <td id=maharashtraDeaths></td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td class=states>Manipur</td>
+                <td id=manipurConfirmed></td>
+                <td id=manipurRecovered></td>
+                <td id=manipurDeaths></td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td class=states>Meghalaya</td>
+                <td id=meghalayaConfirmed></td>
+                <td id=meghalayaRecovered></td>
+                <td id=meghalayaDeaths></td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td class=states>Mizoram</td>
+                <td id=mizoramConfirmed></td>
+                <td id=mizoramRecovered></td>
+                <td id=mizoramDeaths></td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td class=states>Nagaland</td>
+                <td id=nagalandConfirmed></td>
+                <td id=nagalandRecovered></td>
+                <td id=nagalandDeaths></td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td class=states>Odisha</td>
+                <td id=odishaConfirmed></td>
+                <td id=odishaRecovered></td>
+                <td id=odishaDeaths></td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td class=states>Puducherry</td>
+                <td id=puducherryConfirmed></td>
+                <td id=puducherryRecovered></td>
+                <td id=puducherryDeaths></td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td class=states>Punjab</td>
+                <td id=punjabConfirmed></td>
+                <td id=punjabRecovered></td>
+                <td id=punjabDeaths></td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td class=states>Rajasthan</td>
+                <td id=rajasthanConfirmed></td>
+                <td id=rajasthanRecovered></td>
+                <td id=rajasthanDeaths></td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td class=states>Sikkim</td>
+                <td id=sikkimConfirmed></td>
+                <td id=sikkimRecovered></td>
+                <td id=sikkimDeaths></td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td class=states>Tamil Nadu</td>
+                <td id=tamilnaduConfirmed></td>
+                <td id=tamilnaduRecovered></td>
+                <td id=tamilnaduDeaths></td>
+            </tr>
+            <tr>
+                <td>32</td>
+                <td class=states>Telangana</td>
+                <td id=telanganaConfirmed></td>
+                <td id=telanganaRecovered></td>
+                <td id=telanganaDeaths></td>
+            </tr>
+            <tr>
+                <td>33</td>
+                <td class=states>Tripura</td>
+                <td id=tripuraConfirmed></td>
+                <td id=tripuraRecovered></td>
+                <td id=tripuraDeaths></td>
+            </tr>
+            <tr>
+                <td>35</td>
+                <td class=states>Uttar Pradesh</td>
+                <td id=uttarpradeshConfirmed></td>
+                <td id=uttarpradeshRecovered></td>
+                <td id=uttarpradeshDeaths></td>
+            </tr>
+            <tr>
+                <td>36</td>
+                <td class=states>Uttarakhand</td>
+                <td id=uttarakhandConfirmed></td>
+                <td id=uttarakhandRecovered></td>
+                <td id=uttarakhandDeaths></td>
+            </tr>
+            <tr>
+                <td>37</td>
+                <td class=states>West Bengal</td>
+                <td id=westbengalConfirmed></td>
+                <td id=westbengalRecovered></td>
+                <td id=westbengalDeaths></td>
+            </tr>
+            <tr>
+                <td colspan=2 class=total>Total</td>
+                <td id=totalConfirmed></td>
+                <td id=totalRecovered></td>
+                <td id=totalDeaths></td>
+            </tr>
+
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
